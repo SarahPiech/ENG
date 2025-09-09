@@ -1,7 +1,8 @@
 .container {
-	background-color: pink;
-	height: 100vh;
+	background-color: white;
+	height: 895px;
 	display: flex;
+	overflow: hidden;
 }
 
 .sidebar {
@@ -94,6 +95,7 @@
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	}
 
 .righttop {
@@ -102,9 +104,181 @@
 	color: lightgray;
 	letter-spacing: 2px;
 	font-size: 30px;
+	flex-shrink: 0;
 	}
 	
 .rightcontent{
+	height: 840px;
 	background-color: #f0f0f0;
-	flex: 1;
+	overflow-y: auto;
+	padding: 20px;
+	}
+
+/* 字母表格樣式 */
+.alphabet-table {
+	border-collapse: collapse;
+	margin: 20px 0;
+	font-family: Arial, sans-serif;
+	}
+
+.alphabet-table td {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	border: 2px solid #333;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: white;
+	color: #333;
+	}
+
+/* 母音反白樣式 */
+.alphabet-table td.vowel-highlight {
+	background-color: #333;
+	color: white;
+	}
+
+/* 子音反白樣式 */
+.alphabet-table td.consonant-highlight {
+	background-color: #333;
+	color: white;
+	}
+
+/* 劇本標題背景樣式 */
+.script-highlight {
+	background-color: #e6f3ff;
+	padding: 8px 12px;
+	border-radius: 4px;
+	font-weight: bold;
+	color: #0066cc;
+	display: inline-block;
+	}
+
+/* 例子容器樣式 */
+.example-container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	}
+
+/* 例子背景樣式 */
+.example-highlight {
+	background-color: #f0f8ff;
+	padding: 6px 10px;
+	border-radius: 3px;
+	border-left: 3px solid #666;
+	font-family: monospace;
+	color: #333;
+	display: inline-block;
+	width: 160px;
+	}
+
+/* 針對 g 字母的特殊底線處理 */
+.g-underline {
+	text-underline-offset: 3px;
+	}
+
+/* Silent E 樣式 - 在底線下方顯示 x */
+.silent-e {
+	position: relative;
+	}
+
+.silent-e::after {
+	content: "x";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	font-size: 10px;
+	color: #666;
+	}
+
+/* 母音字群樣式 - 在底線下方顯示音標 */
+.vowel-group {
+	position: relative;
+	}
+
+.vowel-group::after {
+	white-space: nowrap;
+	}
+
+.vowel-group[data-sound="ea"]::after {
+	content: "/e/";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	font-size: 10px;
+	color: #666;
+	}
+
+.vowel-group[data-sound="oa"]::after {
+	content: "/oʊ/";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	font-size: 10px;
+	color: #666;
+	}
+
+.vowel-group[data-sound="ee"]::after {
+	content: "/i:/";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	font-size: 10px;
+	color: #666;
+	}
+
+.vowel-group[data-sound="ai"]::after {
+	content: "/eɪ/";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	font-size: 10px;
+	color: #666;
+	}
+
+.vowel-group[data-sound="oo"]::after {
+	content: "/ʊ/";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	font-size: 10px;
+	color: #666;
+	white-space: nowrap;
+	}
+
+/* 子音表格樣式 */
+.consonant-table {
+	border-collapse: collapse;
+	margin: 10px 0;
+	font-family: Arial, sans-serif;
+	}
+
+.consonant-table td {
+	width: 40px;
+	height: 35px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #666;
+	font-size: 14px;
+	background-color: white;
+	color: #333;
+	}
+
+.consonant-table tr:first-child td {
+	font-weight: bold;
+	background-color: #f5f5f5;
+	}
+
+.consonant-table tr:last-child td {
+	font-size: 12px;
+	color: #0066cc;
+	font-family: monospace;
 	}
