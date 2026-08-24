@@ -224,7 +224,7 @@
 	}
 
 .vowel-group[data-sound="ee"]::after {
-	content: "/i:/";
+	content: "/i/";
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -281,4 +281,51 @@
 	font-size: 12px;
 	color: #0066cc;
 	font-family: monospace;
+	}
+
+/* 名詞表格樣式 */
+.noun-table {
+	border-collapse: collapse;
+	margin: 10px 0;
+	font-family: Arial, sans-serif;
+	}
+
+.noun-table th,
+.noun-table td {
+	min-width: 90px;
+	padding: 8px 12px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #666;
+	font-size: 14px;
+	background-color: white;
+	color: #333;
+	}
+
+.noun-table th,
+.noun-table td:first-child {
+	font-weight: bold;
+	background-color: #f5f5f5;
+	}
+
+.determiner-table th:first-child,
+.determiner-table td:first-child {
+	min-width: 0;
+	width: 36px;
+	padding: 8px 4px;
+	}
+
+.determiner-table td:last-child {
+	text-align: left;
+	font-weight: normal;
+	background-color: white;
+	}
+
+.verb-table td:first-child {
+	text-align: left;
+	}
+
+.verb-table .verb-sub td:first-child {
+	padding-left: 20px;
+	font-weight: normal;
 	}
