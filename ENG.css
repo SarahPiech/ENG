@@ -50,6 +50,14 @@
 	background-color: #f0f0f0;
 	}
 
+.sidebar a[data-info="verbs"] {
+	color: #0066cc;
+	}
+
+.sidebar a[data-info="verbs"]:hover {
+	color: #004c99;
+	}
+
 .sub-menu {
 	margin-left: 10px;
 	margin-top: 2px;
@@ -112,6 +120,17 @@
 	background-color: #f0f0f0;
 	overflow-y: auto;
 	padding: 20px;
+	}
+
+.home-outline ol {
+	margin: 12px 0 28px 0;
+	padding-left: 28px;
+	color: #333;
+	line-height: 1.8;
+	}
+
+.home-outline li {
+	margin-bottom: 4px;
 	}
 
 /* 字母表格樣式 */
@@ -321,6 +340,12 @@
 	background-color: white;
 	}
 
+.pattern-table th:nth-child(2),
+.pattern-table td:nth-child(2) {
+	text-align: left;
+	padding-left: 16px;
+	}
+
 .verb-table td:first-child {
 	text-align: left;
 	}
@@ -328,4 +353,145 @@
 .verb-table .verb-sub td:first-child {
 	padding-left: 20px;
 	font-weight: normal;
+	}
+
+.conjunction-table td:nth-child(3) {
+	text-align: left;
+	font-weight: normal;
+	background-color: white;
+	}
+
+.statement-table th,
+.statement-table td {
+	text-align: left;
+	padding-left: 16px;
+	}
+
+.neg-mark {
+	color: #0066cc;
+	}
+
+.neg-underline {
+	text-decoration: underline;
+	}
+
+.interjection-list {
+	font-weight: bold;
+	font-size: 42px;
+	line-height: 1.4;
+	color: #333;
+	}
+
+.gear-icon-table th:first-child,
+.gear-icon-table td:first-child {
+	text-align: center;
+	}
+
+.film-gear-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 24px;
+	}
+
+.film-gear-col {
+	flex: 0 1 auto;
+	}
+
+.tense-table td:first-child {
+	white-space: nowrap;
+	}
+
+.tense-table td:not(:first-child) {
+	font-size: 18px;
+	font-weight: normal;
+	background-color: white;
+	}
+
+.premiere-table td:first-child {
+	white-space: nowrap;
+	}
+
+.premiere-table td:not(:first-child) {
+	font-weight: normal;
+	background-color: white;
+	}
+
+.premiere-sentence-table td:not(:first-child) {
+	text-align: left;
+	}
+
+.example-highlight.clause-preview {
+	width: auto;
+	max-width: 560px;
+	}
+
+.clause-table td:not(:first-child) {
+	text-align: left;
+	font-weight: normal;
+	background-color: white;
+	}
+
+.clause-quiz-stage {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	}
+
+.clause-quiz-items {
+	flex: 1;
+	min-width: 0;
+	}
+
+.clause-quiz-item {
+	display: none;
+	}
+
+.clause-quiz-item.is-active {
+	display: block;
+	}
+
+.clause-quiz-sentence {
+	display: inline-block;
+	background-color: #f0f8ff;
+	padding: 8px 12px;
+	border-radius: 3px;
+	border-left: 3px solid #666;
+	font-family: monospace;
+	color: #333;
+	cursor: default;
+	}
+
+.clause-quiz-answer {
+	visibility: hidden;
+	color: #0066cc;
+	font-weight: bold;
+	}
+
+.clause-quiz-sentence:hover .clause-quiz-answer {
+	visibility: visible;
+	}
+
+.clause-quiz-nav {
+	display: flex;
+	gap: 8px;
+	flex-shrink: 0;
+	}
+
+.clause-quiz-nav button {
+	padding: 6px 12px;
+	border: 1px solid #666;
+	background-color: white;
+	color: #333;
+	font-size: 13px;
+	cursor: pointer;
+	}
+
+.clause-quiz-nav button:hover:not(:disabled) {
+	background-color: #f0f0f0;
+	}
+
+.clause-quiz-nav button:disabled {
+	color: #aaa;
+	border-color: #ccc;
+	cursor: default;
 	}
